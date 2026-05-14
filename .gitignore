@@ -1,7 +1,7 @@
-# Dados brutos e processados
-data/
-*.zip
-*.csv
+# Dados brutos
+data/*.zip
+data/*.csv
+data/2023/
 
 # Cache Python
 __pycache__/

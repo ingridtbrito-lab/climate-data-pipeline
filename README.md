@@ -4,9 +4,25 @@ Pipeline de extração, análise e modelagem de dados climáticos brasileiros co
 
 ## Sobre o projeto
 
-Este projeto coleta dados climáticos públicos do INMET (Instituto Nacional de Meteorologia),
-realiza tratamento, análise exploratória e modelagem estatística dos dados,
-com foco em temperatura, precipitação e outros indicadores meteorológicos brasileiros.
+Coleta e processa dados históricos do INMET (Instituto Nacional de Meteorologia),
+realizando tratamento, análise exploratória e modelagem estatística sobre
+temperatura e precipitação de 567 estações meteorológicas brasileiras.
+
+**Volume de dados:** ~4,5 milhões de registros processados (2023)
+
+## Análises realizadas
+
+### Temperatura média por mês
+![Temperatura por mês](data/temperatura_por_mes.png)
+
+### Temperaturas extremas
+![Temperaturas extremas](data/temperaturas_extremas.png)
+
+### Precipitação por mês
+![Precipitação](data/precipitacao_por_mes.png)
+
+### Classificação de meses (seco/normal/chuvoso)
+![Classificação](data/classificacao_meses.png)
 
 ## Estrutura
 
@@ -26,11 +42,20 @@ climate-data-pipeline/
 - Scikit-learn
 - Jupyter Notebook
 
+## Tecnologias
+
+- Python 3.14
+- Pandas
+- Matplotlib / Seaborn
+- Scikit-learn
+- Jupyter Notebook
+
 ## Como executar
 
 ```bash
 pip install -r requirements.txt
-jupyter notebook
+python src/extractor.py   # baixa e extrai os dados
+jupyter notebook          # abre os notebooks de análise
 ```
 
 ## Fonte dos dados
